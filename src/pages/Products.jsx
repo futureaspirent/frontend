@@ -6,7 +6,7 @@ import Papa from 'papaparse';
 import Sidebar from '../components/Sidebar';
 import styles from '../styles/Products.module.css';
 
-
+import image from "../assets/upload.png";
 import image1 from '../assets/Divider.png';
 import action from '../assets/action.png';
 import csv from '../assets/csv.png';
