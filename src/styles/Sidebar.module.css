@@ -1,0 +1,230 @@
+.sidebar {
+  width: 240px;
+  min-width: 240px;
+  background: #1f2937;
+  padding: 7px 0px;
+  display: flex;
+  flex-direction: column;
+  color: #9ca3af;
+}
+
+.logo {
+  font-size:10px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content:start;
+  border-bottom: 1px solid #374151;
+
+
+}
+.frame1{
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: #9ca3af;
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: background 0.2s ease;
+}
+
+.nav a:hover {
+  background: #374151;
+  color: white;
+}
+
+.nav a.active {
+  background: #374151;
+  color: white;
+  font-weight: 600;
+}
+
+.userWrapper {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 12px;
+  border-top: 1px solid #374151;
+  color: #e5e7eb;
+}
+
+
+.icon{
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.userWrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.userDropdown {
+  position: absolute;
+  bottom: calc(100% + 10px);   /* shows above the user */
+  left: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 6px;
+  z-index: 1000;
+}
+
+.userDropdown button {
+  background: none;
+  border: none;
+  padding: 8px 14px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.userDropdown button:hover {
+  background: #f3f4f6;
+}
+
+
+@media (max-width: 768px) {
+  .main {
+    padding: 20px;
+    padding-bottom: 80px !important;
+  }
+
+
+
+  /* Hide desktop title */
+  .pageTitle {
+    display: none !important;
+  }
+
+  /* Show mobile header and bottom nav */
+  .mobileHeader {
+    display: flex !important;
+  }
+
+  .mobileBottomNav {
+    display: flex !important;
+  }
+
+  /* Other mobile adjustments */
+  .inventoryStats {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .pieChart {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .pieChart::after {
+    inset: 14px !important;
+  }
+
+  .tableHeader {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px;
+  }
+
+  .addBtn {
+    width: 100% !important;
+  }
+
+  .choiceModal,
+  .csvModal {
+    width: 95% !important;
+    max-width: 95% !important;
+  }
+
+
+
+   /* icons and its placement */
+
+  /* bottom - 58px */
+  .sidebar{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    width: 100%;
+   z-index: 10;
+   height:58px;
+   border-radius: 20px;
+  }
+
+  /* top - 58px */
+    .logo{
+    height:58px;
+    z-index: 10;
+    position: fixed;
+    top:0px;
+    left:0;
+    background-color: #1f2937;
+    width: 100%;
+    margin: 0;
+    padding:10px;
+  }
+  .nav2{
+    position: fixed;
+    right:0px;
+    top:9px;
+    z-index: 10;
+
+  }
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+   
+  }
+  a>img+span{
+    display: none;
+  }
+
+  .frame1{
+    margin-left:10px;
+    height:40px;
+    width:40px;
+    margin-bottom:10px;
+  }
+
+  .userWrapper{
+    position: fixed;
+    top:5px;
+    left:calc(50% - 10px);
+    z-index:10;
+    border:unset;
+
+  }
+
+  .userDropdown {
+
+  top: calc(100% ); 
+  padding:10px 20px;
+  height:50px;
+  left:calc(50% - 50px)
+  }
+ 
+ 
+}
