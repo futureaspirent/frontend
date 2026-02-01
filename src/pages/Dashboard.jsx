@@ -300,7 +300,7 @@ const Dashboard = () => {
                
                <li key={p._id} style={{ display: "flex",flexDirection:"column",alignItems:"center",justifyContent:"center", gap: 10 }}>
               <img
-           src={p?.imageUrl ? p.imageUrl : `${import.meta.env.VITE_API_URL}/default/product.png`}
+           src={p?.imageUrl ? `${import.meta.env.VITE_API_URL+p.imageUrl}` : `${import.meta.env.VITE_API_URL}/default/product.png`}
 
                 alt={p.name}
                 style={{ width: 40, height: 40, borderRadius: 6, objectFit: "cover" }}
