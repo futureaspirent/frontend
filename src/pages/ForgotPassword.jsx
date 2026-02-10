@@ -14,9 +14,9 @@ const ForgotPassword = () => {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-
   if (!email) return alert("Please enter your email");
-
+  
+  e.target.setAttribute('disabled',true)
   try {
     const res = await fetch(`${import.meta.env.VITE_API_URL}/api/otp/generate`, {
       method: "POST",
@@ -32,6 +32,8 @@ const handleSubmit = async (e) => {
   } catch (err) {
     console.error(err);
     alert(err.message);
+  e.target.setAttribute('disabled',false)
+
   }
 };
 
