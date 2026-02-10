@@ -407,7 +407,7 @@ const handleDownload = () => {
           <table className={styles.invoiceTable}>
             <thead>
               <tr>
-                <th>Product</th>
+                <th>Product ID</th>
                 <th>Qty</th>
                 <th>Price</th>
               </tr>
